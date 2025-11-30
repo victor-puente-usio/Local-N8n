@@ -1,4 +1,13 @@
-n8n.{$DOMAIN_NAME}.{$SUBDOMAIN} {
+
+
+{
+    local_certs
+}
+
+
+
+
+n8n.local.test {
     reverse_proxy n8n:5678 {
       flush_interval -1
     }

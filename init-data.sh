@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e;
 
+echo "********* SETUP INFO: Creating non-root Postgres user and granting privileges..."
 
 if [ -n "${POSTGRES_NON_ROOT_USER:-}" ] && [ -n "${POSTGRES_NON_ROOT_PASSWORD:-}" ]; then
 	psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL

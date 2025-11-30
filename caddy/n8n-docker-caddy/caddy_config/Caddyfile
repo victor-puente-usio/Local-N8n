@@ -1,0 +1,5 @@
+n8n.{$DOMAIN_NAME}.{$SUBDOMAIN} {
+    reverse_proxy n8n:5678 {
+      flush_interval -1
+    }
+}
